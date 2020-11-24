@@ -109,24 +109,24 @@ FUSDC_OLD_REWARD_POOL_TOTAL_SUPPLY_AT_SNAPSHOT = FUSDC_OLD_REWARD_POOL_CONTRACT.
 FUSDT_OLD_REWARD_POOL_TOTAL_SUPPLY_AT_SNAPSHOT = FUSDT_OLD_REWARD_POOL_CONTRACT.functions.totalSupply().call({}, SNAPSHOT_BLOCK)
 FUSDC_OLD_VAULT_TOTAL_SUPPLY_AT_SNAPSHOT = FUSDC_OLD_VAULT_CONTRACT.functions.totalSupply().call({}, SNAPSHOT_BLOCK)
 FUSDT_OLD_VAULT_TOTAL_SUPPLY_AT_SNAPSHOT = FUSDT_OLD_VAULT_CONTRACT.functions.totalSupply().call({}, SNAPSHOT_BLOCK)
-FUSDC_OLD_MIGRATED = FUSDC_OLD_VAULT_CONTRACT.functions.balanceOf(FUSDC_REWARD_POOL_ADDRESS).call({}, SNAPSHOT_BLOCK)
-FUSDT_OLD_MIGRATED = FUSDT_OLD_VAULT_CONTRACT.functions.balanceOf(FUSDT_REWARD_POOL_ADDRESS).call({}, SNAPSHOT_BLOCK)
-FUSDT_LP_POOL_TOTAL_SUPPLY = FUSDT_LP_POOL_CONTRACT.functions.totalSupply().call({}, SNAPSHOT_BLOCK)
-FUSDC_LP_POOL_TOTAL_SUPPLY = FUSDC_LP_POOL_CONTRACT.functions.totalSupply().call({}, SNAPSHOT_BLOCK)
-ETHERSCAN_API_KEY = 'GEQXZDY67RZ4QHNU1A57QVPNDV3RP1RYH4'
-FUSDC_REWARD_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDC_REWARD_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-FUSDT_REWARD_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDT_REWARD_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-FUSDC_OLD_REWARD_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDC_OLD_REWARD_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-FUSDC_OLD_REWARD_POOL_TRANSACTIONS_INTERNAL = requests.get(f'https://api.etherscan.io/api?module=account&action=txlistinternal&address={FUSDC_OLD_REWARD_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-FUSDT_OLD_REWARD_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDT_OLD_REWARD_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-FUSDC_LP_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress={FUSDC_LP_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-FUSDT_LP_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress={FUSDT_LP_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-FUSDC_LP_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDC_LP_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-FUSDC_LP_POOL_TRANSACTIONS_TOKENS = requests.get(f'https://api.etherscan.io/api?module=account&action=tokentx&address={FUSDC_LP_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-FUSDT_LP_POOL_TRANSACTIONS_TOKENS = requests.get(f'https://api.etherscan.io/api?module=account&action=tokentx&address={FUSDT_LP_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-FUSDT_LP_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDT_LP_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
-USDC = interface.ERC20(USDC_ADDRESS)
-USDT = interface.ERC20(USDT_ADDRESS)
+# FUSDC_OLD_MIGRATED = FUSDC_OLD_VAULT_CONTRACT.functions.balanceOf(FUSDC_REWARD_POOL_ADDRESS).call({}, SNAPSHOT_BLOCK)
+# FUSDT_OLD_MIGRATED = FUSDT_OLD_VAULT_CONTRACT.functions.balanceOf(FUSDT_REWARD_POOL_ADDRESS).call({}, SNAPSHOT_BLOCK)
+# FUSDT_LP_POOL_TOTAL_SUPPLY = FUSDT_LP_POOL_CONTRACT.functions.totalSupply().call({}, SNAPSHOT_BLOCK)
+# FUSDC_LP_POOL_TOTAL_SUPPLY = FUSDC_LP_POOL_CONTRACT.functions.totalSupply().call({}, SNAPSHOT_BLOCK)
+# ETHERSCAN_API_KEY = 'GEQXZDY67RZ4QHNU1A57QVPNDV3RP1RYH4'
+# FUSDC_REWARD_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDC_REWARD_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# FUSDT_REWARD_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDT_REWARD_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# FUSDC_OLD_REWARD_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDC_OLD_REWARD_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# FUSDC_OLD_REWARD_POOL_TRANSACTIONS_INTERNAL = requests.get(f'https://api.etherscan.io/api?module=account&action=txlistinternal&address={FUSDC_OLD_REWARD_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# FUSDT_OLD_REWARD_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDT_OLD_REWARD_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# FUSDC_LP_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress={FUSDC_LP_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# FUSDT_LP_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress={FUSDT_LP_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# FUSDC_LP_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDC_LP_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# FUSDC_LP_POOL_TRANSACTIONS_TOKENS = requests.get(f'https://api.etherscan.io/api?module=account&action=tokentx&address={FUSDC_LP_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# FUSDT_LP_POOL_TRANSACTIONS_TOKENS = requests.get(f'https://api.etherscan.io/api?module=account&action=tokentx&address={FUSDT_LP_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# FUSDT_LP_POOL_TRANSACTIONS = requests.get(f'https://api.etherscan.io/api?module=account&action=txlist&address={FUSDT_LP_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=asc&apikey={ETHERSCAN_API_KEY}').json()['result']
+# USDC = interface.ERC20(USDC_ADDRESS)
+# USDT = interface.ERC20(USDT_ADDRESS)
 
 VAULTS = {
     'fUSDT': FUSDT_VAULT_ADDRESS,
@@ -170,14 +170,14 @@ def uniqueAddressesForTransactions(transactions, transactions2):
         accounts[transaction['to']] = True
   return accounts.keys()
 
-FUSDC_REWARD_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDC_REWARD_POOL_TRANSACTIONS,[])
-FUSDT_REWARD_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDT_REWARD_POOL_TRANSACTIONS,[])
-FUSDT_OLD_REWARD_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDT_OLD_REWARD_POOL_TRANSACTIONS,[])
-FUSDC_OLD_REWARD_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDC_OLD_REWARD_POOL_TRANSACTIONS, FUSDC_OLD_REWARD_POOL_TRANSACTIONS_INTERNAL)
-FUSDT_LP_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDT_LP_TRANSACTIONS,[])
-FUSDC_LP_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDC_LP_TRANSACTIONS,[])
-FUSDT_LP_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDT_LP_POOL_TRANSACTIONS, FUSDT_LP_POOL_TRANSACTIONS_TOKENS)
-FUSDC_LP_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDC_LP_POOL_TRANSACTIONS, FUSDC_LP_POOL_TRANSACTIONS_TOKENS)
+# FUSDC_REWARD_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDC_REWARD_POOL_TRANSACTIONS,[])
+# FUSDT_REWARD_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDT_REWARD_POOL_TRANSACTIONS,[])
+# FUSDT_OLD_REWARD_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDT_OLD_REWARD_POOL_TRANSACTIONS,[])
+# FUSDC_OLD_REWARD_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDC_OLD_REWARD_POOL_TRANSACTIONS, FUSDC_OLD_REWARD_POOL_TRANSACTIONS_INTERNAL)
+# FUSDT_LP_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDT_LP_TRANSACTIONS,[])
+# FUSDC_LP_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDC_LP_TRANSACTIONS,[])
+# FUSDT_LP_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDT_LP_POOL_TRANSACTIONS, FUSDT_LP_POOL_TRANSACTIONS_TOKENS)
+# FUSDC_LP_POOL_TX_ADDRESSES = uniqueAddressesForTransactions(FUSDC_LP_POOL_TRANSACTIONS, FUSDC_LP_POOL_TRANSACTIONS_TOKENS)
 
 def cached(path):
     path = Path(path)
@@ -803,6 +803,8 @@ def step_15(amountsLostMap):
             iouAsFraction = (totalIou) * userRatio * pow(10, 12)
             iouAmount = int(iouAsFraction)
             iouAmounts['IOU'][account] = iouAmount
+            iouAmounts['fUSDT'][account] = int(FUSDT_TOTAL_DISTRIBUTION * userRatio)
+            iouAmounts['fUSDC'][account] = int(FUSDC_TOTAL_DISTRIBUTION * userRatio)
     iouSum = int(sum(iouAmounts['IOU'].values()) / pow(10, 12))
     print(f'Testing total IOU amounts: Expected {totalIou}, Actual: {iouSum}')
     return iouAmounts
@@ -830,7 +832,7 @@ def deployUsdcMerkleContract():
     MerkleDistributor.deploy(token, root, {'from': deployer})
 
 def main():
-  snapshotExpectations = step_00()                                                                    # 0. Print and test snapshot expectations (snapshot block, returned values, etc)
+  # snapshotExpectations = step_00()                                                                    # 0. Print and test snapshot expectations (snapshot block, returned values, etc)
   tokenBalanceMap = step_01()                                                                         # 1. Calculate vault balance of every user at snapshot
   stakerBalanceMap = step_02()                                                                        # 2. Calculate total amount staked per user at snapshot
   aggregatedBalances = step_03(tokenBalanceMap, stakerBalanceMap)                                     # 3. Aggregate balances from step 2 and 3
@@ -875,9 +877,11 @@ def main():
   print(f'USDC new vault total supply: {FUSDC_TOTAL_SUPPLY_AT_SNAPSHOT}')
   print(f'USDT new vault total supply: {FUSDT_TOTAL_SUPPLY_AT_SNAPSHOT}')
 
+  print(f'aggregatedBalancesAndStakers[farmer1]: ')
+
   amountsLost = step_14(aggregatedBalancesAndStakers)                                                 # 14. Step 14. Find USDC and USDT lost for each user
   iouAmounts = step_15(amountsLost)                                                                   # 15. Find IOU amounts for each user
-  merkleDistributionUsdc = step_16(aggregatedBalancesAndStakers)                                      # 16. Generate merkle distribution for normalized aggregated USDC balances
-  merkleDistributionUsdt = step_17(aggregatedBalancesAndStakers)                                      # 17. Generate merkle distribution for normalized aggregated USDT balances
+  merkleDistributionUsdc = step_16(iouAmounts)                                      # 16. Generate merkle distribution for normalized aggregated USDC balances
+  merkleDistributionUsdt = step_17(iouAmounts)                                      # 17. Generate merkle distribution for normalized aggregated USDT balances
   merkleDistributionIou = step_18(iouAmounts)                                                         # 18. Generate merkle distribution for IOU
 
